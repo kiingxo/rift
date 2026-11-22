@@ -1,0 +1,12 @@
+.git
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.mypy_cache
+.claude
+scans
+tests
+*.sarif
+rift-report*.html
+allowlist.local.txt

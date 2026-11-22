@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+allowlist.local.txt
+confirmed-open-redirects.txt
+*.pyc
+.DS_Store
+.claude/
+*.sarif
+rift-report*.html
+scans/

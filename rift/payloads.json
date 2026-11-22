@@ -1,0 +1,83 @@
+{
+  "destination": "https://www.google.com",
+  "payloads": [
+    {
+      "id": "absolute-https",
+      "category": "absolute",
+      "value": "https://www.google.com",
+      "modes": ["fast", "deep"]
+    },
+    {
+      "id": "absolute-http",
+      "category": "absolute",
+      "value": "http://www.google.com",
+      "modes": ["deep"]
+    },
+    {
+      "id": "protocol-relative",
+      "category": "protocol-relative",
+      "value": "//www.google.com/",
+      "modes": ["fast", "deep"]
+    },
+    {
+      "id": "encoded-dot-segment",
+      "category": "encoded",
+      "value": "//google.com/%2e%2e%2f",
+      "modes": ["fast", "deep"]
+    },
+    {
+      "id": "encoded-slashes",
+      "category": "encoded",
+      "value": "%2f%2fwww.google.com/",
+      "modes": ["deep"]
+    },
+    {
+      "id": "backslash",
+      "category": "backslash",
+      "value": "/\\www.google.com/",
+      "modes": ["deep"]
+    },
+    {
+      "id": "double-encoded-slashes",
+      "category": "encoded",
+      "value": "%252f%252fwww.google.com/",
+      "modes": ["deep"]
+    },
+    {
+      "id": "mixed-slashes",
+      "category": "backslash",
+      "value": "\\/\\/www.google.com/",
+      "modes": ["deep"]
+    },
+    {
+      "id": "extra-slashes",
+      "category": "normalization",
+      "value": "////www.google.com/",
+      "modes": ["deep"]
+    },
+    {
+      "id": "nested-parameter",
+      "category": "nested",
+      "value": "/redirect?url=//www.google.com/",
+      "modes": ["deep"]
+    },
+    {
+      "id": "case-variant",
+      "category": "case",
+      "value": "https://WWW.Google.Com/",
+      "modes": ["deep"]
+    },
+    {
+      "id": "scheme-case",
+      "category": "case",
+      "value": "HtTP://www.google.com",
+      "modes": ["fast", "deep"]
+    },
+    {
+      "id": "leading-whitespace",
+      "category": "parsing",
+      "value": " //www.google.com/",
+      "modes": ["deep"]
+    }
+  ]
+}

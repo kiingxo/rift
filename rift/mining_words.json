@@ -1,0 +1,28 @@
+{
+  "words": [
+    "returnTo",
+    "nextUrl",
+    "successUrl",
+    "continueUrl",
+    "callbackUrl",
+    "gotoUrl",
+    "destUrl",
+    "forwardUrl",
+    "targetUrl",
+    "redirectTo",
+    "backUrl",
+    "exitUrl",
+    "outbound",
+    "bounce",
+    "hop",
+    "continueTo",
+    "returnPath",
+    "redirectPath",
+    "nextPath",
+    "destinationUrl",
+    "redirUrl",
+    "fallbackUrl",
+    "errorUrl",
+    "cancelUrl"
+  ]
+}

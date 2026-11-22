@@ -1,0 +1,4 @@
+# Targets for `python -m rift urls.txt`. One URL per line; blank lines and # comments are ignored.
+# Only list sites you own or have written permission to test.
+https://app.example.com/
+https://api.example.com/v1/status

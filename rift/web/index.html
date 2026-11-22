@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="rift-token" content="__RIFT_TOKEN__">
+<meta name="color-scheme" content="light dark">
+<title>Rift</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/app.css">
+<script src="/theme.js"></script>
+</head>
+<body>
+<div class="shell">
+<nav class="side" aria-label="Main">
+<div class="brand">
+<svg aria-hidden="true" width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M13 2 23 7v6c0 5.500-4 9.500-10 11C7 22.500 3 18.500 3 13V7z"></path><path d="M9 13.500 12 16l5-6"></path></svg>
+<span class="brand-name">Rift</span>
+<span class="brand-version" id="version"></span>
+</div>
+<div class="nav">
+<a href="#/new" data-nav="new"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="9" r="7"></circle><path d="M9 6v6M6 9h6"></path></svg>New scan</a>
+<a href="#/scan/latest" data-nav="scan"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 4h12M3 9h12M3 14h8"></path></svg>Findings</a>
+<a href="#/scans" data-nav="scans"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="9" cy="9" r="7"></circle><path d="M9 5v4l3 2"></path></svg>Scan history</a>
+<a href="#/checks" data-nav="checks"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5l2 2 3-3M3 12l2 2 3-3M11 5.500h4M11 12.500h4"></path></svg>Check catalogue</a>
+</div>
+<div class="side-foot">
+<div class="theme" role="group" aria-label="Colour theme">
+<button type="button" data-theme-choice="system" aria-pressed="true">Auto</button>
+<button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+<button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+</div>
+<div class="side-note">
+<strong>Read-only scanner</strong>
+<span>GET, HEAD and OPTIONS only. Never submits forms; signs in only with a test session you give it.</span>
+<span>Runs on this machine. Nothing is sent to a third party.</span>
+<span class="lab" id="lab" hidden>Lab mode is on: local and private addresses can be scanned.</span>
+</div>
+</div>
+</nav>
+<main class="main" id="view" tabindex="-1"></main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<noscript>Rift's console needs JavaScript. The command line works without it: python -m rift --help</noscript>
+<script src="/app.js"></script>
+</body>
+</html>

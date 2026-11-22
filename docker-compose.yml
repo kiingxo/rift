@@ -1,0 +1,14 @@
+services:
+  rift:
+    build: .
+    image: rift:latest
+    ports:
+      # Only this computer can open the console. The console has no user
+      # accounts, so do not publish it on 0.0.0.0 without a login in front.
+      - "127.0.0.1:8600:8600"
+    volumes:
+      - rift-scans:/app/scans
+    restart: unless-stopped
+
+volumes:
+  rift-scans:
