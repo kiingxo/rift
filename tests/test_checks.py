@@ -260,7 +260,9 @@ def test_redaction_never_returns_the_whole_value():
 def test_placeholders_and_public_keys_are_not_high_severity():
     assert scan_text('password: "your_password_here_1234"') == []
     assert scan_text('apiSecret = "changeme-changeme-changeme"') == []
-    found = SecretsCheck().run(context([page(body='<script>key="AIzaSyA1234567890abcdefghijklmnopqrstuv"</script>')]))
+    # A made-up key, built in two parts so secret scanners do not mistake the test for a leak.
+    fake_browser_key = "AIza" + "SyA1234567890abcdefghijklmnopqrstuv"
+    found = SecretsCheck().run(context([page(body=f'<script>key="{fake_browser_key}"</script>')]))
     assert [item.severity for item in found] == ["info"]
 
 
